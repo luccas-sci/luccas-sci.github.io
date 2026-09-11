@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --font-tech: "Chakra Petch", -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "Space Mono", monospace;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Precision Silicon & Wafer Lithography Visual Layers */
+.silicon-grid {
+  background-image: 
+    radial-gradient(circle at 1px 1px, rgba(245, 158, 11, 0.08) 1px, transparent 0),
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 32px 32px, 16px 16px, 16px 16px;
+}
+
+.wafer-substrate {
+  background: radial-gradient(circle at 50% 30%, #161922 0%, #0d0f14 65%, #08090d 100%);
+}
+
+.reticle-corner {
+  position: relative;
+}
+.reticle-corner::before,
+.reticle-corner::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-color: rgba(245, 158, 11, 0.4);
+  pointer-events: none;
+}
+.reticle-corner::before {
+  top: -1px;
+  left: -1px;
+  border-top: 1.5px solid;
+  border-left: 1.5px solid;
+}
+.reticle-corner::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 1.5px solid;
+  border-right: 1.5px solid;
+}
+
+/* Custom scrollbar for EDA telemetry tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090a0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #252b38;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #394254;
+}

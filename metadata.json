@@ -1,0 +1,6 @@
+{
+  "name": "Painel de Desenvolvimento SoC",
+  "description": "Acompanhamento em tempo real das etapas de design de silício, verificação, floorplan e preparação para tape-out do SoC.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
